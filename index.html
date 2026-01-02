@@ -270,13 +270,13 @@
         };
 
         function open() {
-          var password = prompt("Please enter your password:");
-          if (friends[password]) {
-            $("#recipient-name").text("To: " + friends[password].name);
-            $("#message-body").text(friends[password].msg);
+          var passcode = prompt("Please enter your passcode:");
+          if (friends[passcode]) {
+            $("#recipient-name").text("To: " + friends[passcode].name);
+            $("#message-body").text(friends[passcode].msg);
             envelope.addClass("open").removeClass("close");
-          } else if (password !== null) {
-            alert("Invalid Password!");
+          } else if (passcode !== null) {
+            alert("Invalid Passcode!");
           }
         }
 
